@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
-:root {
+:root, :root[data-theme='dark'] {
     --primary-color: #f0f0f0;
     
     --primary-bg-color: #111217;
@@ -10,6 +10,23 @@
     --text-color: #9A9A9C;
     --link-color: #9A9A9C;
     --icon-color: #C7C8C9;
+}
+
+:root[data-theme='light']{
+    --primary-color: #0B0B0B;
+
+    --primary-bg-color: #E9E9E9;
+    --secondary-bg-color: #C7C8C9;
+    --border-color: #c7c8c9;
+
+    --tithle-color: #C7C8C9;
+    --text-color: #28292E;
+    --link-color: #28292E;
+    --icon-color: #56575A;
+}
+
+html[data-theme='light'] .brand__logo {
+    filter: invert(1);
 }
 
 * {
@@ -55,6 +72,8 @@ i {
 #toggleTheme {
     font-size: 1.5rem;
     color: var(--primary-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
 }
 
 .menu {
